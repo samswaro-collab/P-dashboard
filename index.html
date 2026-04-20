@@ -8,7 +8,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f5f5f5;color:#333;overflow-x:hidden;}
-.topbar{background:#002b5c;color:white;padding:12px 20px;display:flex;align-items:center;gap:20px;border-bottom:3px solid #f47920;position:sticky;top:0;z-index:100;}
+.topbar{background:#002b5c;color:white;padding:12px 20px;display:flex;align-items:center;gap:20px;border-bottom:3px solid #b45309;position:sticky;top:0;z-index:100;}
 .logo-pill{background:white;color:#002b5c;padding:6px 12px;border-radius:20px;font-weight:bold;font-size:13px;}
 .topbar-title{flex:1;font-size:18px;font-weight:600;}
 .pill{background:rgba(255,255,255,0.15);padding:5px 10px;border-radius:15px;font-size:12px;}
@@ -19,8 +19,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .sidebar-label{font-size:11px;font-weight:700;text-transform:uppercase;color:#99b2cc;padding:0 15px;margin-bottom:8px;letter-spacing:0.5px;}
 .sidebar-section{margin-bottom:22px;}
 .sidebar-item{padding:10px 15px;cursor:pointer;font-size:13px;transition:all 0.2s;border-left:3px solid transparent;}
-.sidebar-item:hover{background:rgba(244,121,32,0.2);}
-.sidebar-item.active{background:rgba(244,121,32,0.3);border-left-color:#f47920;font-weight:600;}
+.sidebar-item:hover{background:rgba(180,83,9,0.2);}
+.sidebar-item.active{background:rgba(180,83,9,0.25);border-left-color:#b45309;font-weight:600;}
 .main-content{flex:1;padding:30px;overflow-y:auto;height:calc(100vh - 80px);}
 .section{display:none;}
 .section.active{display:block;}
@@ -36,7 +36,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .tag{display:inline-block;background:#f0f0f0;color:#333;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;margin-right:6px;margin-bottom:6px;}
 .tag-hot{background:#fdecea;color:#c62828;}
 .tag-blue{background:#e3f2fd;color:#1565c0;}
-.tag-orange{background:#fff3e0;color:#e65100;}
+.tag-orange{background:#fff3e0;color:#92400e;}
 .tag-india{background:#fef3c7;color:#92400e;}
 .tag-green{background:#e8f5e9;color:#1b5e20;}
 .contact-card{background:white;border-radius:6px;padding:15px;border-left:3px solid #0075be;margin-bottom:12px;font-size:12px;}
@@ -44,7 +44,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .contact-title{color:#666;font-size:11px;margin-bottom:5px;}
 .contact-location{color:#999;font-size:10px;}
 .div-card{background:white;border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.1);border-left:4px solid #0075be;margin-bottom:14px;}
-.div-card.meggitt{border-left-color:#f47920;}
+.div-card.meggitt{border-left-color:#b45309;}
 .div-name{font-size:14px;font-weight:700;color:#002b5c;margin-bottom:4px;}
 .div-locations{font-size:11.5px;color:#555;line-height:1.6;margin-bottom:6px;}
 .div-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-right:4px;}
@@ -60,12 +60,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .chain-head{font-size:12.5px;font-weight:700;color:#1a1a2e;}
 .chain-body-text{font-size:11.5px;color:#5a6a8a;margin-top:4px;line-height:1.6;}
 .warn-blue{background:#e3f2fd;border:1px solid #1565c0;border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:12.5px;color:#0d47a1;}
-.warn-orange{background:#fff3e0;border:1px solid #f47920;border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:12.5px;color:#e65100;}
+.warn-orange{background:#fff3e0;border:1px solid #b45309;border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:12.5px;color:#92400e;}
 .warn-green{background:#e8f5e9;border:1px solid #4caf50;border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:12.5px;color:#1b5e20;}
 ::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-track{background:#f1f1f1;}::-webkit-scrollbar-thumb{background:#0075be;border-radius:4px;}
 @media(max-width:1200px){.grid-4{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr);}.grid-2{grid-template-columns:1fr;}}
 </style>
+<!-- <!-- BEAKON_PALETTE_FIXED --> -->
 </head>
 <body>
 
@@ -144,12 +145,12 @@ const PA_DATA = {
 
   // ── Platform Solutions (5 from Parker Aerospace slide) ──────────────
   platforms: [
-    { name:"Flight Controls", color:"#f59e0b", icon:"✈️",
+    { name:"Flight Controls", color:"#7c5c2e", icon:"✈️",
       locations:["Military Flight Controls Div — Irvine, CA + Dublin, GA","Commercial Flight Controls Div — Ogden, UT"],
       programs:["F-35 (JSF)","Military rotorcraft","Boeing 737 MAX","Boeing 787","Airbus A320neo"],
       products:["Trim actuation","Cockpit controls","Primary / secondary flight control actuators","Servovalves","Control electronics & software","Surface-position sensors","High-lift actuation"],
       cyient:"DO-178C software validation, FCS integration testing, certification documentation for flight control systems — Level A/B software capability" },
-    { name:"Engine", color:"#f47920", icon:"🔥",
+    { name:"Engine", color:"#b45309", icon:"🔥",
       locations:["Gas Turbine Fuel Systems Div — Mentor, OH","Engine Systems Div — Grand Rapids, MI"],
       programs:["CFM LEAP-1A/1B","GE GE9X","Rolls-Royce Trent 1000","GE T700 (military)"],
       products:["Fuel spray nozzles","Manifolds & pigtails","Thrust reverser actuators","Engine build unit","Heat management systems","Oil pumps & reservoirs","Pneumatics"],
@@ -173,7 +174,7 @@ const PA_DATA = {
 
   // ── Signal Chains (5 sales-ready chains) ─────────────────────────────
   signals: [
-    { num:1, color:"#f47920",
+    { num:1, color:"#b45309",
       signal:   "Meggitt $50M Synergy Target — FY2026 Final Push",
       response: "Parker management has publicly stated $50M synergy remains for FY2026. Cost reduction pressure = outsourcing appetite for Braking, Fire/Safety & Defense divisions.",
       gap:      "Braking Systems (Akron/Coventry), Fire Safety (Simi Valley), Motion Power & Sensing (France/UK/Vietnam) all have Meggitt-origin engineering headcount under margin pressure.",
@@ -188,7 +189,7 @@ const PA_DATA = {
       response: "F-35 Block 4 now expected 2031+. Parker supplies F-35 integral fuel and inerting systems. Long-duration program = continuous tech pubs, CMM updates, configuration management.",
       gap:      "Defense Systems Division (Irvine CA) and Military Flight Controls (Irvine CA, Dublin GA) manage F-35 content. ITAR-compliant tech pubs and configuration management are outsourceable.",
       entry:    "ITAR credential required. Lead with Cyient's ITAR registration. Target: Defense Systems Division VP Engineering, Irvine CA." },
-    { num:4, color:"#f59e0b",
+    { num:4, color:"#7c5c2e",
       signal:   "India Manufacturing Gap — No Parker Aerospace ER&D Center",
       response: "Parker India (Navi Mumbai) is a distribution/industrial office only. Zero dedicated aerospace engineering center in India — unlike Honeywell (HTS), GE (Titan), Embraer (Adani).",
       gap:      "Cyient HQ in Hyderabad: aerospace AS9100D-certified, 3,000+ aerospace engineers, HAL/DRDO/BDL neighbours. Parker is the most un-tapped India opportunity in the A&D landscape.",
@@ -304,10 +305,20 @@ const PA_DATA = {
   competitors: [
     { name:"LTTS (L&T Technology Services)", presence:"Parker industrial/pneumatics (confirmed)", threat:"Medium",
       note:"LTTS is in Parker's ecosystem via machine I/O/Industry 4.0 work. Not deep in aerospace ER&D. Differentiate on: AS9100D, DO-178C, DO-254, aerospace cert — these are not LTTS's strengths." },
-    { name:"CDI Corporation", presence:"3-year managed staffing agreement (Aerospace)", threat:"Low–Medium",
-      note:"CDI is a staffing firm — placing bodies, not delivering engineering outcomes. Cyient's model is project-based with accountability for certification milestones. Higher value, easier ROI to justify." },
-    { name:"Collins Aerospace (RTX)", presence:"Parker Aerospace customer relationship context", threat:"None Direct",
-      note:"Collins is an OEM competitor to Parker in flight controls, not an ER&D vendor. Context: when pitching Parker, Collins' competitive pressure on Parker programs is a useful urgency lever." },
+    { name:"CDI / Engineering Staffing Firms", presence:"3-year managed staffing agreement (Aerospace)", threat:"Low–Medium",
+      note:"CDI and similar staffing firms place individual engineers (T&M) — not delivering engineering outcomes. Cyient's SOW-based project model with certification milestone accountability is a clearly differentiated higher-value proposition." },
+    { name:"Belcan (Cognizant)", presence:"Engineering T&M staffing across Parker Hannifin US facilities", threat:"Medium",
+      note:"Belcan (acquired by Cognizant for $1.3B) is a large US aerospace engineering staffing firm with Parker site presence (Ogden UT, Mentor OH, Akron OH). T&M headcount model — Cyient delivers SOW outcomes + India cost advantage Belcan cannot match." },
+    { name:"HCL Engineering (post-Geometric)", presence:"PLM / digital engineering — possible Parker Hannifin account", threat:"Medium",
+      note:"HCL acquired Geometric (2016), gaining deep PLM/CAD DNA (CATIA, NX, Creo, Windchill). Competes for Parker's PLM and digital engineering wallet. Counter: Cyient's full DO-178C + AS9100 aerospace certification stack." },
+    { name:"Wipro Engineering", presence:"General aerospace ER&D — no confirmed Parker engagement", threat:"Low-Medium",
+      note:"Wipro's aerospace practice competes for similar ER&D scope (structures, avionics SW, tech pubs). Differentiate on DO-178C, DO-254, AS9100D aerospace cert depth vs. Wipro's broader IT heritage." },
+    { name:"Capgemini Engineering (Altran)", presence:"Aerospace ER&D — industrial segment overlap", threat:"Low-Medium",
+      note:"Altran (now Capgemini Engineering) has industrial + aerospace ER&D heritage in Europe and growing US presence. Primarily onshore delivery. Cyient India cost advantage and aerospace cert depth differentiate." },
+    { name:"Quest Global", presence:"Aerospace ER&D — bizav/commercial aviation focus", threat:"Low-Medium",
+      note:"Quest (Carlyle-backed) competes in aerospace ER&D and certification engineering. Growing North America presence post Alpha-Numero acquisition. Counter with: DO-178C DAL A/B depth and India delivery cost model Quest cannot match." },
+    { name:"Randstad Engineering / RCM Technologies", presence:"Engineering staffing across Parker US plants", threat:"Low",
+      note:"Engineering staffing firms with Parker Hannifin site presence. Compete for T&M headcount — not SOW-based delivery. Cannot compete on complex certification programs or program-outcome accountability." },
     { name:"Tata Technologies", presence:"General aerospace ER&D — no confirmed Parker engagement", threat:"Low",
       note:"Tata Tech competes in aerospace ER&D but no Parker relationship confirmed. Cyient's aerospace cert depth (DO-178C, DO-254) and HAL/defense credentials differentiate." }
   ],
@@ -323,7 +334,7 @@ const PA_DATA = {
 
   // ── Sales Plays ──────────────────────────────────────────────────────
   salesPlays: [
-    { color:"#f47920", icon:"🔄",
+    { color:"#b45309", icon:"🔄",
       title:"Play 1 — Meggitt Synergy Cost Reduction",
       targetLine:"Target: Aerospace President · VP Ops · FY2026 window",
       body:"Parker publicly stated $50M Meggitt synergy remaining in FY2026 earnings calls. Engineering outsource is the fastest lever — Braking Systems (Akron/Coventry), Fire Safety (Simi Valley), Motion Power & Sensing (France/UK) are the synergy pressure points.",
@@ -361,15 +372,15 @@ const PA_DATA = {
   <a href="https://www.salesbeakon.com" title="BEAKON Hub" style="display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;">
   <div style="width:36px;height:36px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(245,158,11,0.4);">
     <svg width="20" height="20" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M40 16 L24 3" stroke="#fff" stroke-width="3" opacity="0.7" stroke-linecap="round"/>
-      <path d="M40 16 L32 2" stroke="#fff" stroke-width="3" opacity="0.85" stroke-linecap="round"/>
-      <path d="M40 16 L40 0" stroke="#fff" stroke-width="3" opacity="1" stroke-linecap="round"/>
-      <path d="M40 16 L48 2" stroke="#fff" stroke-width="3" opacity="0.85" stroke-linecap="round"/>
-      <path d="M40 16 L56 3" stroke="#fff" stroke-width="3" opacity="0.7" stroke-linecap="round"/>
-      <rect x="33" y="16" width="14" height="9" rx="2" fill="#fff"/>
-      <rect x="30" y="24" width="20" height="3" rx="1.5" fill="#fff" opacity="0.9"/>
-      <path d="M34 27 L30 62 L50 62 L46 27 Z" fill="#fff" opacity="0.25" stroke="#fff" stroke-width="2"/>
-      <rect x="25" y="62" width="30" height="5" rx="2.5" fill="#fff" opacity="0.95"/>
+      <path d="M40 16 L24 3" stroke="#1a1a1a" stroke-width="3" opacity="0.9" stroke-linecap="round"/>
+      <path d="M40 16 L32 2" stroke="#1a1a1a" stroke-width="3" opacity="0.95" stroke-linecap="round"/>
+      <path d="M40 16 L40 0" stroke="#1a1a1a" stroke-width="3" opacity="1" stroke-linecap="round"/>
+      <path d="M40 16 L48 2" stroke="#1a1a1a" stroke-width="3" opacity="0.95" stroke-linecap="round"/>
+      <path d="M40 16 L56 3" stroke="#1a1a1a" stroke-width="3" opacity="0.9" stroke-linecap="round"/>
+      <rect x="33" y="16" width="14" height="9" rx="2" fill="#1a1a1a"/>
+      <rect x="30" y="24" width="20" height="3" rx="1.5" fill="#1a1a1a" opacity="0.9"/>
+      <path d="M34 27 L30 62 L50 62 L46 27 Z" fill="#1a1a1a" opacity="0.4" stroke="#1a1a1a" stroke-width="2"/>
+      <rect x="25" y="62" width="30" height="5" rx="2.5" fill="#1a1a1a" opacity="0.95"/>
     </svg>
   </div>
   <span style="font-size:13px;font-weight:900;letter-spacing:2px;color:white;line-height:1;">BEAKON</span>
@@ -449,7 +460,7 @@ const PA_DATA = {
   </div>
 
   <div class="grid-2">
-    <div class="card" style="border-top-color:#f47920;">
+    <div class="card" style="border-top-color:#b45309;">
       <div class="card-title">Meggitt Integration Status</div>
       <p style="font-size:13px;font-weight:700;color:#002b5c;margin-bottom:6px;" id="ov-meggitt">—</p>
       <p style="font-size:12px;color:#555;line-height:1.6;">4 new divisions in Aerospace Group (Braking, Fire/Safety, Defense, Motion/Power/Sensing) + 3 in Engineered Materials + 1 in Filtration. Integration synergies delivering ahead of schedule.</p>
@@ -491,7 +502,7 @@ const PA_DATA = {
     <div style="display:flex;gap:30px;flex-wrap:wrap;">
       <div><span style="font-size:22px;font-weight:700;color:#002b5c;">12</span><br><span style="font-size:11px;color:#999;">Divisions</span></div>
       <div><span style="font-size:22px;font-weight:700;color:#0075be;">43</span><br><span style="font-size:11px;color:#999;">Sites Globally</span></div>
-      <div><span style="font-size:22px;font-weight:700;color:#f47920;">4</span><br><span style="font-size:11px;color:#999;">Meggitt-Origin Divs</span></div>
+      <div><span style="font-size:22px;font-weight:700;color:#b45309;">4</span><br><span style="font-size:11px;color:#999;">Meggitt-Origin Divs</span></div>
       <div><span style="font-size:22px;font-weight:700;color:#16a34a;">5</span><br><span style="font-size:11px;color:#999;">Platform Solutions</span></div>
       <div><span style="font-size:22px;font-weight:700;color:#002b5c;">$6.2B</span><br><span style="font-size:11px;color:#999;">Aero Revenue FY2025</span></div>
     </div>
@@ -503,7 +514,7 @@ const PA_DATA = {
   <div class="section-title">👥 Key Contacts — Parker Aerospace</div>
   <div class="warn-blue" id="ct-note">⚠️ <strong>Verify on LinkedIn before outreach.</strong> Parker Hannifin org is organised by division and site. Entry point: Aerospace Group President (Irvine CA) → VP Operations → Division GMs/VPs by site.</div>
   <div id="ct-exec" class="grid-2" style="margin-bottom:20px;"></div>
-  <div class="card" style="border-top-color:#f47920;margin-top:20px;">
+  <div class="card" style="border-top-color:#b45309;margin-top:20px;">
     <div class="card-title">🎯 Engineering &amp; Program Buyers — Division Level</div>
     <div style="font-size:12px;color:#666;margin-bottom:14px;">These are the budget holders actively spending on programs. VP Engineering by division = the person who decides whether to hire or outsource. Mike Portela (VP Ops) is the group-level ER&D outsourcing authority.</div>
     <div id="ct-ta" class="grid-2"></div>
@@ -551,7 +562,7 @@ const PA_DATA = {
       <div class="kpi" id="hr-roles">—</div>
       <div class="kpi-label">Total Parker Hannifin (Mar 2026)</div>
     </div>
-    <div class="card" style="border-top-color:#f47920;">
+    <div class="card" style="border-top-color:#b45309;">
       <div class="card-title">Hot Division Roles</div>
       <div id="hr-hot"></div>
     </div>
@@ -717,7 +728,7 @@ const PA_DATA = {
   <div class="section-title">🇮🇳 India Strategy — Parker's Biggest Whitespace</div>
   <div class="warn-orange" id="in-gap"></div>
   <div class="grid-2">
-    <div class="card" style="border-top-color:#f47920;">
+    <div class="card" style="border-top-color:#b45309;">
       <div class="card-title">Parker India Today</div>
       <p id="in-presence" style="font-size:12.5px;line-height:1.7;color:#444;"></p>
     </div>
@@ -773,14 +784,14 @@ function initDashboard() {
   document.getElementById('ov-opps').innerHTML = d.opportunities.map(o => `
     <div class="prog-row">
       <div class="prog-label"><span>${o.label}</span><span style="color:#002b5c;font-weight:700;">${o.score}</span></div>
-      <div class="prog-bar"><div class="prog-fill" style="width:${o.score}%;background:${o.score>85?'#002b5c':o.score>75?'#0075be':'#f47920'};"></div></div>
+      <div class="prog-bar"><div class="prog-fill" style="width:${o.score}%;background:${o.score>85?'#002b5c':o.score>75?'#0075be':'#b45309'};"></div></div>
     </div>`).join('');
 
   // ── Divisions ─────────────────────────────────────────────────────────
   document.getElementById('div-cards').innerHTML = d.aeroGroup.divisions.map(div => `
     <div class="div-card ${div.meggitt?'meggitt':''}">
       <div class="div-name">${div.name}
-        ${div.meggitt ? '<span class="div-badge" style="background:#fff3e0;color:#e65100;">🆕 Meggitt</span>' : '<span class="div-badge" style="background:#e3f2fd;color:#1565c0;">Parker Legacy</span>'}
+        ${div.meggitt ? '<span class="div-badge" style="background:#fff3e0;color:#92400e;">🆕 Meggitt</span>' : '<span class="div-badge" style="background:#e3f2fd;color:#1565c0;">Parker Legacy</span>'}
       </div>
       <div class="div-locations">📍 ${div.sites.join(' · ')}</div>
       <div style="font-size:11.5px;color:#555;line-height:1.6;">${div.focus}</div>
@@ -796,7 +807,7 @@ function initDashboard() {
     </div>`).join('');
 
   document.getElementById('ct-ta').innerHTML = d.hiring.engBuyers.map(t => `
-    <div class="contact-card" style="border-left-color:#f47920;">
+    <div class="contact-card" style="border-left-color:#b45309;">
       <div class="contact-name">${t.name}</div>
       <div class="contact-title" style="color:#002b5c;font-weight:600;">${t.title}</div>
       <div class="contact-location">📍 ${t.location}</div>
@@ -850,7 +861,7 @@ function initDashboard() {
 
   // ── Fast-Sell Skills ──────────────────────────────────────────────────
   document.getElementById('fs-cards').innerHTML = d.fastSell.map(f => `
-    <div class="card" style="border-top-color:#f47920;">
+    <div class="card" style="border-top-color:#b45309;">
       <div class="card-title">${f.title}</div>
       <p style="font-size:12.5px;line-height:1.7;color:#444;">${f.relevance}</p>
     </div>`).join('');
@@ -931,7 +942,7 @@ function initDashboard() {
   // ── Competitive Intel ─────────────────────────────────────────────────
   document.getElementById('comp-cards').innerHTML = d.competitors.map(c => `
     <div class="card" style="border-top-color:${c.threat==='Medium'?'#f59e0b':c.threat==='High'?'#ef4444':'#6b7280'};">
-      <div class="card-title">${c.name} <span class="tag" style="background:${c.threat==='Medium'?'#fff3e0':c.threat==='High'?'#fdecea':'#f0f0f0'};color:${c.threat==='Medium'?'#e65100':c.threat==='High'?'#c62828':'#555'};">⚠ ${c.threat} Threat</span></div>
+      <div class="card-title">${c.name} <span class="tag" style="background:${c.threat==='Medium'?'#fff3e0':c.threat==='High'?'#fdecea':'#f0f0f0'};color:${c.threat==='Medium'?'#92400e':c.threat==='High'?'#c62828':'#555'};">⚠ ${c.threat} Threat</span></div>
       <p style="font-size:12px;color:#666;margin-bottom:6px;">${c.presence}</p>
       <p style="font-size:12.5px;line-height:1.7;color:#444;">${c.note}</p>
     </div>`).join('');
@@ -953,3 +964,5 @@ function prog_row(l, s) {
 </style>
 </body>
 </html>
+
+<!-- BEAKON_BEACON_DARK -->
